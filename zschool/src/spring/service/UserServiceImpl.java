@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import spring.dao.SDao;
 
-@Service("dAOService")
-public class DAOServiceImpl implements DAOService {
+@Service("userService")
+public class UserServiceImpl implements UserService {
 
 	@Resource(name ="sd")
 	public SDao sd;
@@ -21,6 +21,12 @@ public class DAOServiceImpl implements DAOService {
 	@Override
 	public void getRecentBlogs() {
 		sd.getRecentBlogs();
+	}
+
+	@Override
+	public boolean confirmUser(String username, String password) {
+		// TODO Auto-generated method stub
+		return sd.confirmUser(username,password);
 	}
 
 }

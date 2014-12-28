@@ -14,4 +14,10 @@ public class SDao {
 		
 	}
 
+	public boolean confirmUser(String username, String password) {
+		//通过数据库的判定
+		// TODO Auto-generated method stub
+		return true;
+	}
+
 }

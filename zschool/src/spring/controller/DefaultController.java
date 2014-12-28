@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import spring.service.DAOService;
+import spring.service.UserService;
+
 
 @Controller
 public class DefaultController {
 
-	@Resource(name="dAOService")
-	private DAOService daoService;
+	@Resource(name="userService")
+	private UserService daoService;
 
 	@RequestMapping(value ={"/*"}, method = RequestMethod.GET)
 	public ModelAndView showHomePage(Map<String, Object> model) {
@@ -24,11 +25,11 @@ public class DefaultController {
 		return mv;
 	}
 
-	public DAOService getDaoService() {
+	public UserService getDaoService() {
 		return daoService;
 	}
 
-	public void setDaoService(DAOService daoService) {
+	public void setDaoService(UserService daoService) {
 		this.daoService = daoService;
 	}
 }

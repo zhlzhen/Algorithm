@@ -6,6 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>登陆结果</h2>
+	<h2>登陆结果   : ${op}</h2>
 </body>
 </html>
