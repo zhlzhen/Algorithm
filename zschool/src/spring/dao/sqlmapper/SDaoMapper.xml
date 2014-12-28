@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="spring.model">
+	
+    <select id="getRecentBlogs"  parameterType="int"   resultMap="classesMap"  >
+	   select id,name,headteacher,studentcount  
+	   from class  
+	   order by id  
+	</select>
+    
+	
+	 <resultMap type="spring.model.Blog" id="classesMap">
+	     <id property="id" column="id" />  
+	     <result property="name" column="name"/>  
+	     <result property="headteacher" column="headteacher"/>
+	     <result property="studentcount" column="studentcount"/>
+	</resultMap>
+	 
+</mapper>
