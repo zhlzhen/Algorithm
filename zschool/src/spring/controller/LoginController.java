@@ -25,6 +25,7 @@ public class LoginController {
 		ModelAndView mv=new ModelAndView("");
 		if(is){
 			request.getSession().setAttribute("user", username);
+			request.setAttribute("user", username);
 			mv.addObject("op", "»¶Ó­ÄúµÄµ½À´ "+ username +"!");
 			mv.setViewName("user/success");
 		}else{
