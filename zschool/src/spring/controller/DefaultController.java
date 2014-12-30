@@ -22,7 +22,7 @@ public class DefaultController {
 	public ModelAndView showHomePage(Map<String, Object> model) {
 		ModelAndView mv = new ModelAndView("user/fail");  
 		mv.addObject("op", "µÇÂ½Ê§°Ü!");
-		return mv;
+		return null;
 	}
 
 	public UserService getDaoService() {
